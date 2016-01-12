@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Oracle A</title>
+  <link rel="stylesheet" type="text/css" href="boxes.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="character-count.js"></script>
+</head>
+<body>
+  <div>
+    <form action="/tweet" method="post" >
+      <textarea name="tweet" placeholder="your tweet text here"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <% if @tweets %>
+    <% @tweets.each do |tweet| %>
+      <p><%= tweet %></p>
+    <% end %>
+  <% end %>
+</body>
+</html>
